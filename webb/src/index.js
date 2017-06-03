@@ -18,11 +18,14 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-      <div>
+      <div className="container">
 
-        <nav>
-          <h1>HEADER</h1>
-          <ul className="list-inline float-right">
+     <div className="row">
+       <div className="col-md-9">
+             <img className="logo" src="media/logo_black.png" />
+       </div>
+       <div className="col-md-3">
+            <ul className="list-inline">
             <li>
               <Link to="/">
                 Start
@@ -35,7 +38,10 @@ ReactDOM.render(
               </Link>
             </li>
           </ul>
-        </nav>
+       </div>
+     
+       
+</div>
         <Switch>
           <Route path="/comments" component={Comments} />
           <Route path="/" component={App} />

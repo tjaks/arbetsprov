@@ -46,7 +46,7 @@ class PostNew extends Component {
                 />
                 <Field
                     name="categories"
-                    label="Categories"
+                    label="E-mail"
                     //reference to function that returns jsx
                     component={this.renderField}
                 />
@@ -64,9 +64,7 @@ class PostNew extends Component {
 }
 
 function validate(values) {
-    //errors has values depending on the form, like this one has title, categories and content.
     const errors = {};
-
 
     if (!values.title) {
         errors.title = "Enter a title.";

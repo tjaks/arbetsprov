@@ -9,7 +9,6 @@ class PostsIndex extends Component {
         this.props.fetchPosts();
     }
 
-    //helper function
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
@@ -26,10 +25,10 @@ class PostsIndex extends Component {
             <div>
                 <div className="text-xs-right">
                     <Link className="btn btn-primary" to="/posts/new">
-                        Add a post
+                        Skicka
                     </Link>
                 </div>
-                <h3>Posts</h3>
+                <h3>Kommentarer</h3>
                 <ul className="list-group">
                     {this.renderPosts()}
                 </ul>
