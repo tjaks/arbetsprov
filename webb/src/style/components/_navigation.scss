@@ -1,0 +1,52 @@
+.navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    padding: 0 10px;
+
+    @include breakpoint(sm) {
+     padding: 0 60px;
+    }
+
+    &--background{
+         background-color: #fff;
+         border-bottom: 1px solid #DDD;
+         transition: all 0.8s ease;
+         height: 65px;
+
+    }
+
+    ul {
+        @include breakpoint(xs) {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        }
+        list-style-type: none;
+        overflow: hidden;
+        line-height: 1;
+    }
+
+    li {
+        float: right;
+    }
+
+    img {
+        margin-top: 12px;
+        float: left;
+        width: 170px;
+        height: auto;
+    }
+
+    a {
+        cursor: pointer;
+        padding-right: 10px;
+        text-decoration:none;
+        color: #333;
+        transition: all 0.3s ease;
+            &:hover{
+                text-decoration:none;
+                color: #999;
+            }
+    }
+}

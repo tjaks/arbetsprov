@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createPost } from '../actions';
 import { fetchPosts } from '../actions';
 
 class PostNew extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoading: false
+        };
+    }
 
     renderField(field) {
-        //ES6 refactor
         const { meta: { touched, error } } = field;
         const className = `form-group ${touched && error ? 'has-danger' : ''}`
 
@@ -16,7 +21,6 @@ class PostNew extends Component {
             <div className={className}>
                 <label>{field.label}</label>
                 <input
-                    className="form-control"
                     type="text"
                     {...field.input}
                 />
@@ -27,10 +31,17 @@ class PostNew extends Component {
     }
 
     onSubmit(values) {
-        this.props.createPost(values, () => {
-             this.props.fetchPosts();
+        const { createPost, fetchPosts } = this.props;
+
+        this.setState({ isLoading: true });
+        createPost(values, () => {
+            // update list
+            fetchPosts();
+            this.setState({ isLoading: false });
         });
+
     }
+
 
     render() {
         const { handleSubmit } = this.props;
@@ -40,49 +51,58 @@ class PostNew extends Component {
                 <Field
                     name="title"
                     //Arbitrary properties
-                    label="Title"
-                    //reference to function that returns jsx
+                    label="Namn*"
                     component={this.renderField}
                 />
                 <Field
                     name="categories"
-                    label="E-mail"
-                    //reference to function that returns jsx
+                    label="E-mail*"
                     component={this.renderField}
                 />
                 <Field
                     name="content"
-                    label="Post Content"
-                    //reference to function that returns jsx
+                    label="Meddelande*"
                     component={this.renderField}
                 />
-                <button type="submit" className="btn btn-success">Submit</button>
-                <Link to="/" className="btn btn-danger">Cancel</Link>
+
+                <button type="submit" className={"button button__cta button--blood " + (this.state.isLoading ? 'hide' : 'showit')}>Skicka</button>
+                <figure className={"comments__spinner " + (this.state.isLoading ? 'showit' : 'hide')}><img src="/media/spinner.gif" /></figure>
             </form>
         );
     }
 }
-
+//validation
 function validate(values) {
     const errors = {};
 
     if (!values.title) {
-        errors.title = "Enter a title.";
+        errors.title = "Glöm inte att ange ett namn.";
+    }
+    else if (values.title.length < 2) {
+        errors.title = 'Du måste ange mer än 2 tecken.'
     }
     if (!values.categories) {
-        errors.categories = "Enter some categories.";
+        errors.categories = "Glöm inte att ange din e-mail.";
+    }
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.categories)) {
+        errors.categories = 'Felaktig e-mail'
     }
     if (!values.content) {
-        errors.content = "Enter some content.";
+        errors.content = "Glöm inte att lämna ett meddelande.";
+    }
+    else if (values.title.length < 10) {
+        errors.title = 'Du måste ange mer än 10 tecken i en kommentar.'
     }
 
     return errors;
 }
-
+const afterSubmit = (result, dispatch) =>
+    dispatch(reset('PostsNewForm'));
 
 export default reduxForm({
     validate,
-    form: 'PostsNewForm'
+    form: 'PostsNewForm',
+    onSubmitSuccess: afterSubmit
 })(
-    connect(null, { createPost })(PostNew)
+    connect(null, { fetchPosts, createPost })(PostNew)
     );

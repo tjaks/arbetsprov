@@ -1,20 +1,56 @@
-body{
-    background-color: #333!important;
-    font-family: light;
+body {
+    background-color: #fff;
+    font-family: light!important;
     padding:0;
     margin:0;
     height: 100%;
     width:100%;
 }
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: helveticaNeueMedium!important;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+input {
+    border-radius: 0;
+    border:0;
+    border-bottom: 1px solid #333!important;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #55595c;
+}
+
+.hide {
+    display: none;
+}
+
+.showit {
+    display: block;
+}
+
 @font-face {
     font-family: helveticaNeue;
-    src: url('~/style/fonts/HelveticaNeue.ttf');
+    src: url('~/src/style/fonts/HelveticaNeue.ttf');
+}
+@font-face {
+    font-family: helveticaNeueBold;
+    src: url('~/src/style/fonts/HelveticaNeue-Bold.ttf');
+}
+@font-face {
+    font-family: helveticaNeueMedium;
+    src: url('~/src/style/fonts/HelveticaNeue-Medium.ttf');
 }
 @font-face {
     font-family: fat;
-    src: url('~/style/fonts/fat.ttf');
+    src: url('~/src/style/fonts/fat.ttf');
 }
 @font-face {
     font-family: light;
-    src: url('~/style/fonts/light.ttf');
+    src: url('~/src/style/fonts/light.ttf');
 }

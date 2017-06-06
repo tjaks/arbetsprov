@@ -5,8 +5,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import promise from 'redux-promise';
 import PostsNew from './components/post_new';
-import App from './components/app';
+import Home from './components/home';
+import Home2 from './components/home2';
 import Comments from './components/comments';
+import Footer from './components/footer';
+import Header from './components/header';
 
 import reducers from './reducers';
 import PostsIndex from './components/posts_index';
@@ -18,37 +21,16 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-      <div className="container">
-
-     <div className="row">
-       <div className="col-md-9">
-             <img className="logo" src="media/logo_black.png" />
-       </div>
-       <div className="col-md-3">
-            <ul className="list-inline">
-            <li>
-              <Link to="/">
-                Start
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/comments">
-                Kommentarer
-              </Link>
-            </li>
-          </ul>
-       </div>
-     
-       
-</div>
+      <div>
+        < Header />
         <Switch>
           <Route path="/comments" component={Comments} />
-          <Route path="/" component={App} />
+          <Route path="/home" component={Home2} />
+          <Route path="/" component={Home} />
         </Switch>
-        <footer>footer</footer>
+        < Footer />
       </div>
     </BrowserRouter>
 
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.app'));

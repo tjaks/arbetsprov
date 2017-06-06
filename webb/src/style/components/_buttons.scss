@@ -1,0 +1,65 @@
+.button {
+    box-shadow: 0 18px 24px rgba(0,0,0,0.08), 0 18px 24px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+
+    &:hover {
+     box-shadow: 0 24px 28px rgba(0,0,0,0.11), 0 20px 20px rgba(0,0,0,0.11);
+    }
+
+    &__cta {
+        border-radius: 20px;
+        height: auto;
+        width: auto;
+        border: 0;
+        padding: 8px 50px 8px 50px;
+        color: #fff;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+    }
+
+    &__play {
+        display:block;
+        width: 60px;
+        height: 60px;
+        border: 0;
+        border-radius: 50%;
+        color:#f5f5f5;
+        z-index: 2;
+        &::after {
+                content: "";
+                display: inline-block;
+                position: relative;
+                margin: 5px 0 0px 7px;
+                border-style: solid;
+                border-width: 9.5px 0 9.5px 17px;
+                border-color: transparent transparent transparent #f5f5f5;
+        }
+    }
+//sätt som färg variabler
+     &--blood {
+                background: #FF512F;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+    &--blood-reversed {
+                background: #FF512F;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #FF512F, #DD2476);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #FF512F, #DD2476); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+      &--sun {
+                background: #ED4264;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+     &--tranq {
+            background: #d76d77;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #d76d77, #ffaf7b);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #d76d77, #ffaf7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     }
+    &--black {
+        background: #222;  /* fallback for old browsers */
+    }
+}

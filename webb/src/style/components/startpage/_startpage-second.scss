@@ -1,0 +1,72 @@
+.startpage-second {
+    height: 100vh;
+    width: 100%;
+    padding-top: 200px;
+    display: table;
+    background: url('~/media/white_kitchen.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    background-position: right top;
+
+    &__headline {
+        @include breakpoint(sm) {
+            margin-top: 30px;
+        }
+
+        h1, ul {
+            padding: 0 20px;
+             @include breakpoint(sm) {
+                 padding: 0 100px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        h1 {
+            text-align: left;
+            float: right;
+            @include breakpoint(xs) {
+                font-size: 1.9rem;   
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 10px;
+
+        @include breakpoint(sm) {
+          margin-top: 120px;
+        }
+    }
+
+    &__mockup {
+        button {
+            @include breakpoint(sm) {
+                top: 77%;
+                left: 48%;
+            }
+            position: absolute;
+            top: 85%;
+            z-index: 2;
+            left: 40%;
+        }
+
+        img {
+            @include breakpoint(sm) {
+             width: 37%;
+            }
+            width: 80%;
+            position: absolute;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+  
+        } 
+    }
+}

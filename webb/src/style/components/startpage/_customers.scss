@@ -1,0 +1,40 @@
+.customers {
+    margin: 0;
+    text-align: center;
+
+    h2 {
+           margin: 20px;
+    }
+
+    ul {
+            border: 0;
+            border-radius: 7px;
+            box-shadow: 10px 10px 34px 10px rgba(0,0,0,0.07);
+            list-style-type: none;
+            text-align: center;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+
+            li {
+                display: inline-block;
+                padding: 25px;
+
+                a {
+                    /* gör variabel */
+                    background: #FF512F;  /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    color:transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+            }
+    }
+
+    img {
+        height: auto;
+        width: 200px;
+    }
+}

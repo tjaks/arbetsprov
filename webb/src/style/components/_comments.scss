@@ -1,0 +1,40 @@
+.comments {
+    padding: 150px 0;
+    background-image: url('~/media/bg.png'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+    h1 {
+        @include breakpoint(sm) {
+          text-align: left;
+        }
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    form {
+        @include breakpoint(sm) {
+            float:right;
+            margin: 0;
+            display: block;
+            position: fixed;
+        }
+        position: relative;
+        background-color: #FFF;
+        padding: 20px;
+        margin: 0px auto 40px auto;
+        
+        border-radius: 20px;
+        width: 320px;
+        box-shadow: 0 18px 24px rgba(0,0,0,0.08), 0 18px 24px rgba(0,0,0,0.08);
+        transition: all 0.4s ease;
+    }
+
+    &__spinner {
+        img {
+            width: 23px;
+            transition: all 0.4s ease;
+        }
+     }
+}
