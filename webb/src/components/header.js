@@ -34,7 +34,7 @@ export default class Header extends Component {
         return (
             <header>
                 <nav className={"navigation " + (this.state.isScrolled)}>
-                    <Link to="/">
+                    <Link to="/" >
                         <img className="logo" src="media/logo_black.png" />
                     </Link>
                     <ul>

@@ -7,19 +7,27 @@ export default class Jumbotron extends Component {
             <section className="startpage">
 
                 <article className="startpage__headline">
-                    <h1>Vi vill underlätta vardagen <br/>för fastighetsmäklare.</h1>
-                    <ul>
-                        <li><img src="media/dollar-icon.png" />Öka dina försäljningsmöjligheter</li>
-                        <li><img src="media/tie-icon.png" /> Fokuser på det roliga</li>
-                        <li><img src="media/clock-icon.png" /> Få en strukturerad vardag</li>
-                    </ul>
+                    <div className="col-md-6 col-sm-6">
+                        <h1>Vi vill underlätta vardagen <br />för fastighetsmäklare.</h1>
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                        <ul>
+                            <li>Öka dina försäljningsmöjligheter</li>
+                            <li>Fokuser på det roliga</li>
+                            <li>Få en strukturerad vardag</li>
+                        </ul>
+                    </div>
 
-                    <button className="button button__cta button--blood">Läs mer</button>
                 </article>
+                <div className="startpage__button col-md-12">
+                    <button className="button button__cta">Läs mer -></button>
+                </div>
 
-                <figure className="startpage__mockup">
-                    <button className="button button__play button--blood-reversed"></button>
-                    <img src="/media/macbook-flat.png" /> 
+
+
+                <figure className="startpage__mockup ">
+                    <button className="button button__play"></button>
+                    <img src="/media/macbook-flat-texture.png" />
                 </figure>
 
             </section>

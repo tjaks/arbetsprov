@@ -65,7 +65,7 @@ class PostNew extends Component {
                     component={this.renderField}
                 />
 
-                <button type="submit" className={"button button__cta button--blood " + (this.state.isLoading ? 'hide' : 'showit')}>Skicka</button>
+                <button type="submit" className={"button button__cta " + (this.state.isLoading ? 'hide' : 'showit')}>Skicka</button>
                 <figure className={"comments__spinner " + (this.state.isLoading ? 'showit' : 'hide')}><img src="/media/spinner.gif" /></figure>
             </form>
         );
@@ -90,7 +90,7 @@ function validate(values) {
     if (!values.content) {
         errors.content = "Glöm inte att lämna ett meddelande.";
     }
-    else if (values.title.length < 10) {
+    else if (values.content.length < 10) {
         errors.title = 'Du måste ange mer än 10 tecken i en kommentar.'
     }
 

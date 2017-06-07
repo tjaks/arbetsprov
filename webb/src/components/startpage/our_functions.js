@@ -6,20 +6,20 @@ export default class OurFunctions extends Component {
         return (
             <section className="functions">
                 <div className="functions__headline">
-                         <div className="col-md-6">
-                            <h2>Våra funktioner.</h2>
-                        </div>
-                        <div className="col-md-6">
-                            <p>
-                                Kundvårdsfunktioner såsom leadshantering, uppföljning, och automatisk kommunikation mellan fastighetsmäklare och deras kunder gör en del av jobbet.
+                    <div className="col-md-6">
+                        <h2>Våra funktioner.</h2>
+                    </div>
+                    <div className="col-md-6">
+                        <p>
+                            Kundvårdsfunktioner såsom leadshantering, uppföljning, och automatisk kommunikation mellan fastighetsmäklare och deras kunder gör en del av jobbet.
                             </p>
-                        </div>
+                    </div>
                 </div>
 
                 <div className="container">
                     <article className="row">
                         <figure className="col-md-6">
-                            <img src="/media/quedrocrm-1.png" />
+                            <img src="/media/quedrocrm-1.png" alt="Leadshantering" />
                         </figure>
                         <div className="col-md-6">
                             <h3>Leadshantering.</h3>
@@ -40,13 +40,13 @@ export default class OurFunctions extends Component {
                         </div>
 
                         <figure className="col-md-6">
-                            <img src="/media/quedrocrm-2.png" />
+                            <img src="/media/quedrocrm-2.png" alt="Rapport och KPI" />
                         </figure>
                     </article>
 
                     <article className="row">
                         <figure className="col-md-6">
-                            <img src="/media/quedrocrm-1.png" />
+                            <img src="/media/quedrocrm-1.png" alt="Matchning av objekt" />
                         </figure>
                         <div className="col-md-6">
                             <h3>Matchning av objekt.</h3>
@@ -57,7 +57,7 @@ export default class OurFunctions extends Component {
                         </div>
                     </article>
 
-                    <button className="button button__cta button--blood">Läs mer om våra funktioner -></button>
+                    <button className="button button__cta">Läs mer om våra funktioner -></button>
                 </div>
             </section>
         );

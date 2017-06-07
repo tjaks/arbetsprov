@@ -1,45 +1,86 @@
 .startpage {
+   
     height: 100vh;
     width: 100%;
+    padding-top: 200px;
     display: table;
-    background-image: url('~/media/bg.png'); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    background: url('~/media/white_kitchen.jpg') no-repeat center center fixed; 
     background-size: cover;
+    background-position: right top;
 
     &__headline {
-        position: relative;
-        text-align: left;
-        padding-left: 20%;
-        display: table-cell;
-        vertical-align: middle;
-        width: 35%;
-        img {
-            padding-right: 5px;
-            height: auto;
-            width: 23px;
+        @include breakpoint(sm) {
+            margin-top: 30px;
         }
+
         ul {
             list-style-type: none;
-            text-align: left;
+            text-align: center;
             overflow: hidden;
-            margin: 20px 0 20px 0;
-            padding: 0;
+            margin: 15px 0;
+            padding: 0 20px;
+            @include breakpoint(sm) {
+                 padding: 0 100px;
+                 text-align: left;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.9rem; 
+            @include breakpoint(sm) {
+                text-align: left;
+                float: right;
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 10px;
+
+        @include breakpoint(sm) {
+          margin-top: 80px;
+        }
+
+        button {
+            background: $blood;
         }
     }
 
     &__mockup {
-        position: relative;
-        text-align: right;
-        display: table-cell;
-        vertical-align: middle;
-        width: 30%;
-        height: 30%;
+        @include breakpoint(xsHeight) {
+            display: none;
+        }
+        button {
+            @include breakpoint(sm) {
+                top: 77%;
+                left: 48%;
+            }
+            background-color: $black;
+            position: absolute;
+            top: 85%;
+            z-index: 2;
+            left: 40%;
+        }
+
         img {
-             width: 100%;
-             position: absolute;
-             right: 0;
-             bottom: -10px;
+            @include breakpoint(sm) {
+             width: 37%;
+            }
+            @include breakpoint(mdHeight) {
+            width: 27%;
+            }
+          
+            width: 80%;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+  
         } 
     }
 }

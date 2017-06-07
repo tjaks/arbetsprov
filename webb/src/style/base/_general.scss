@@ -15,6 +15,13 @@ p {
     font-family: 'Open Sans', sans-serif!important;
 }
 
+a {
+    &:visited, &:active{
+         text-decoration: none!important;
+    }
+       
+}
+
 input {
     border-radius: 0;
     border:0;

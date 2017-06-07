@@ -7,27 +7,19 @@ export default class Jumbotron extends Component {
             <section className="startpage-second">
 
                 <article className="startpage-second__headline">
-                    <div className="col-md-6">
-                        <h1>Vi vill underlätta vardagen <br />för fastighetsmäklare.</h1>
-                    </div>
-                    <div className="col-md-6">
-                        <ul>
-                            <li>Öka dina försäljningsmöjligheter</li>
-                            <li>Fokuser på det roliga</li>
-                            <li>Få en strukturerad vardag</li>
-                        </ul>
-                    </div>
+                    <h1>Vi vill underlätta vardagen <br/>för fastighetsmäklare.</h1>
+                    <ul>
+                        <li><img src="media/dollar-icon.png" />Öka dina försäljningsmöjligheter</li>
+                        <li><img src="media/tie-icon.png" /> Fokuser på det roliga</li>
+                        <li><img src="media/clock-icon.png" /> Få en strukturerad vardag</li>
+                    </ul>
 
+                    <button className="button button__cta button--blood">Läs mer</button>
                 </article>
-                <div className=" startpage-second__button col-md-12">
-                    <button className="button button__cta button--blood">Läs mer -></button>
-                </div>
 
-
-
-                <figure className="startpage-second__mockup ">
-                    <button className="button button__play button--black"></button>
-                    <img src="/media/macbook-flat-texture.png" />
+                <figure className="startpage-second__mockup">
+                    <button className="button button__play button--blood-reversed"></button>
+                    <img src="/media/macbook-flat.png" /> 
                 </figure>
 
             </section>
