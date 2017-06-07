@@ -17,6 +17,7 @@
     "babel-preset-react": "^6.1.18",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.5",
     "react-addons-test-utils": "^0.14.7",
     "redux-form": "^6.6.3",
