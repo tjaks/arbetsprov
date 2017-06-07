@@ -39,7 +39,7 @@ export default class Header extends Component {
                     </Link>
                     <ul>
                         <li><Link to="/comments">
-                            Kommentarer
+                            Lämna kommentar
                         </Link></li>
                         <li><Link to="/">
                             Start

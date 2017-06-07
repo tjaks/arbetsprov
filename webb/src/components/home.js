@@ -14,7 +14,6 @@ export default class App extends Component {
                     <Customers />
                     <OurFunctions />
                     <Information />
-          
                 </div>
             </div>
         );
