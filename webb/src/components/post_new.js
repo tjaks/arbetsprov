@@ -42,7 +42,13 @@ class PostNew extends Component {
 
     }
 
-
+/*
+    reduxblog.herokuapp.com is a free post API and only takes title, categories and content as parameters.
+    Therefor:
+    title = namn
+    categories = email
+    content = meddelande
+ */
     render() {
         const { handleSubmit } = this.props;
 
