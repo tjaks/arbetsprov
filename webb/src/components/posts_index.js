@@ -8,7 +8,14 @@ class PostsIndex extends Component {
     componentDidMount() {
         this.props.fetchPosts();
     }
-
+    
+    /*
+        reduxblog.herokuapp.com is a free post API and only takes title, categories and content as parameters.
+        Therefor:
+        title = namn
+        categories = email
+        content = meddelande
+    */
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
