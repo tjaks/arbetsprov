@@ -1,5 +1,4 @@
-# arbetsprov
-quedro
+# React website redesign quedro
 
 Installation: 
 open up your terminal window and run
